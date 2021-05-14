@@ -28,7 +28,8 @@ public class Function {
         final String input = request.getQueryParameters().get("answer");
 
         if (input == null) {
-            return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body("Please pass a input on the query string like this: URL?answer=test").build();
+            String body = "<pre>Begin de introductie door <a href=\"/api/cinq-connect?answer=intro\">hier</a> te klikken.</pre>";
+            return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body(body).header("Content-Type", "text/html").build();
         } else {
             Handler handler = new Handler();
             String output = handler.handle(input);

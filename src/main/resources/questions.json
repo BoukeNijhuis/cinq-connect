@@ -1,8 +1,8 @@
 {
   "map": [
     {
-      "oldAnswer": "",
-      "newQuestion": "Introductievraag! Hoeveel is 1 + 1?"
+      "oldAnswer": "intro",
+      "newQuestion": "Introductievraag! Hoeveel is 1 + 1? (vul het antwoord in de URL (achter answer=))"
     },
     {
       "oldAnswer": "2",
@@ -10,7 +10,11 @@
     },
     {
       "oldAnswer": "5",
-      "newQuestion": "Volgende vraag:"
+      "newQuestion": "Waar denkt men dat Covid-19 is ontstaan?"
+    },
+    {
+      "oldAnswer": "wuhan",
+      "newQuestion": "Je hebt het einde van de introductie bereikt!"
     }
   ]
 }

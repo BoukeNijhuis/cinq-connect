@@ -12,14 +12,12 @@ Druk op F5 om de functie-app uit te voeren. Tijdens runtime wordt een URL gegene
 Klik op het pictogram Implementeren in functie-app… (^) in het paneel Azure: Functions. Wanneer u wordt gevraagd om een functie-app te selecteren, kiest u cinq-connect.
 
 ## Zonder VS code ##
-1. `npm install -g azure-functions-core-tools@3 --unsafe-perm true`
-1. Installeer AZ cli
+`npm install -g azure-functions-core-tools@3 --unsafe-perm true`
 
 ### Lokaal draaien
 
-`mvn azure-functions:run`
+`mvn package azure-functions:run`
 
 ### Deployen
 
-1. `az login` 
-1. `func azure functionapp publish cinq-connect` (werkt niet lekker bij mij...)
+`mvn azure-functions:deploy`
