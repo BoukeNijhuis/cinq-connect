@@ -1,0 +1,16 @@
+{
+  "map": [
+    {
+      "oldAnswer": "",
+      "newQuestion": "Introductievraag! Hoeveel is 1 + 1?"
+    },
+    {
+      "oldAnswer": "2",
+      "newQuestion": "Wat is de tiende decimaal van pi?"
+    },
+    {
+      "oldAnswer": "5",
+      "newQuestion": "Volgende vraag:"
+    }
+  ]
+}

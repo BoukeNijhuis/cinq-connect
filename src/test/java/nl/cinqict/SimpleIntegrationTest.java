@@ -1,33 +1,35 @@
 package nl.cinqict;
 
-import com.microsoft.azure.functions.*;
+import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.HttpResponseMessage;
+import com.microsoft.azure.functions.HttpStatus;
+import org.junit.jupiter.api.Test;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.logging.Logger;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
+public class SimpleIntegrationTest {
 
-/**
- * Unit test for Function class.
- */
-public class FunctionTest {
-    /**
-     * Unit test for HttpTriggerJava method.
-     */
     @Test
-    public void testHttpTriggerJava() throws Exception {
-        // Setup
-        @SuppressWarnings("unchecked")
+    public void test() {
+        assertEquals("Wat is de tiende decimaal van pi?", callFunction("2"));
+    }
+
+    private String callFunction(String input) {
+
         final HttpRequestMessage<Optional<String>> req = mock(HttpRequestMessage.class);
 
         final Map<String, String> queryParams = new HashMap<>();
-        queryParams.put("name", "Azure");
+        queryParams.put("answer", input);
         doReturn(queryParams).when(req).getQueryParameters();
 
         final Optional<String> queryBody = Optional.empty();
@@ -47,7 +49,6 @@ public class FunctionTest {
         // Invoke
         final HttpResponseMessage ret = new Function().run(req, context);
 
-        // Verify
-        assertEquals(ret.getStatus(), HttpStatus.OK);
+        return (String) ret.getBody();
     }
 }
