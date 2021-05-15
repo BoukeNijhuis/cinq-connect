@@ -112,6 +112,12 @@
                     </filesets>
                 </configuration>
             </plugin>
+            <!-- otherwise Junit5 tests are not run -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+            </plugin>
         </plugins>
     </build>
 </project>

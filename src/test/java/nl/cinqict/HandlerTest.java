@@ -1,16 +1,28 @@
 package nl.cinqict;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class HandlerTest {
 
-    @Test
-    public void testHandler() throws Exception {
+    Handler handler;
 
-        Handler handler = new Handler();
+    @BeforeEach
+    public void setup() {
+        handler = new Handler();
+    }
+
+    @Test
+    public void happyFlow() throws Exception {
         String output = handler.handle("2");
         assertEquals("Wat is de tiende decimaal van pi?", output);
+    }
+
+    @Test
+    public void unhappyFlow() throws Exception {
+        String output = handler.handle("-1");
+        assertEquals("Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag.", output);
     }
 }

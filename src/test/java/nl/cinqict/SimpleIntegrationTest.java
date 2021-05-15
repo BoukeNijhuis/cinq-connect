@@ -21,7 +21,9 @@ public class SimpleIntegrationTest {
 
     @Test
     public void test() {
-        assertEquals("Wat is de tiende decimaal van pi?", callFunction("2"));
+        assertEquals("<pre>Wat is de tiende decimaal van pi?</pre>", callFunction("2"));
+        assertEquals("<pre>Waar denkt men dat Covid-19 is ontstaan?</pre>", callFunction("5"));
+        assertEquals("<pre>Je hebt het einde van de introductie bereikt!</pre>", callFunction("Wuhan"));
     }
 
     private String callFunction(String input) {
