@@ -18,22 +18,32 @@ public class Function {
     public HttpResponseMessage run(
             @HttpTrigger(
                 name = "req",
-                methods = {HttpMethod.GET, HttpMethod.POST},
+                methods = {HttpMethod.GET},
                 authLevel = AuthorizationLevel.ANONYMOUS)
                 HttpRequestMessage<Optional<String>> request,
             final ExecutionContext context) {
         context.getLogger().info("Java HTTP trigger processed a request.");
 
-        // Parse query parameter
-        final String input = request.getQueryParameters().get("answer");
+        // load replies
+        Handler handler = new Handler();
 
+        // parse query parameter
+        String input = request.getQueryParameters().get("answer");
+ 
+        // no or empty query parameter
         if (input == null) {
-            String body = "<pre>Begin de introductie door <a href=\"/api/cinq-connect?answer=intro\">hier</a> te klikken.</pre>";
-            return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body(body).header("Content-Type", "text/html").build();
+            input = "null";
         } else {
-            Handler handler = new Handler();
-            String output = handler.handle(input);
-            return request.createResponseBuilder(HttpStatus.OK).body(output).build();
+            // normalize the input
+            input = input.toLowerCase();
         }
+
+        // lookup the reply
+        String output = handler.handle(input);
+
+        // format the reply
+        output = "<pre>" + output + "</pre>";
+
+        return request.createResponseBuilder(HttpStatus.OK).body(output).header("Content-Type", "text/html").build();
     }
 }
