@@ -53,20 +53,6 @@ public class Question {
         // format the reply
         String body = Util.format(replyObject.reply);
 
-//        sendRequest(replyObject);
-
         return request.createResponseBuilder(HttpStatus.OK).body(body).header("Content-Type", "text/html").build();
-    }
-
-    private void sendRequest(ReplyObject replyObject) {
-        String url = "http://localhost:7071/api/last-question";
-        BodyPublisher bodyPublisher = BodyPublishers.ofString(new Gson().toJson(replyObject));
-        var request = HttpRequest.newBuilder(URI.create(url)).POST(bodyPublisher).build();
-        try {
-            var response = HttpClient.newHttpClient().send(request, BodyHandlers.ofString());
-            System.out.println("RESPONSE: " + response);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
