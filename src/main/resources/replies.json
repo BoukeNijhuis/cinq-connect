@@ -4,7 +4,7 @@
       "key": "null",
       "value": {
         "order": 0,
-        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=start\">here</a>."
+        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>."
       }
     },    
     {

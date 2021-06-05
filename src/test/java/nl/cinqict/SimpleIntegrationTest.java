@@ -20,10 +20,10 @@ import static org.mockito.Mockito.*;
 public class SimpleIntegrationTest {
 
     @Test
-    public void test() {
-        assertEquals("<pre>Wat is de tiende decimaal van pi?</pre>", callFunction("2"));
-        assertEquals("<pre>Waar denkt men dat Covid-19 is ontstaan?</pre>", callFunction("5"));
-        assertEquals("<pre>Je hebt het einde van de introductie bereikt!</pre>", callFunction("Wuhan"));
+    public void solutionTest() {
+        assertEquals("<pre>What is the second decimal of pi?</pre>", callFunction("2"));
+        assertEquals("<pre>What is the best conference of Portugal?</pre>", callFunction("4"));
+        assertEquals("<pre>This is the end of the introduction!</pre>", callFunction("jnation"));
     }
 
     private String callFunction(String input) {
