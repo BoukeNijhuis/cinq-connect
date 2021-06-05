@@ -2,27 +2,45 @@
   "map": [
     {
       "key": "null",
-      "value": "Begin de introductie door <a href=\"/api/cinq-connect?answer=intro\">hier</a> te klikken."
-    },
+      "value": {
+        "order": 0,
+        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+      }
+    },    
     {
       "key": "NOT_FOUND",
-      "value": "Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag."
+      "value": {
+        "order": -1,
+        "reply": "Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag."
+      }
     },
     {
       "key": "intro",
-      "value": "Introductievraag! Hoeveel is 1 + 1? <br><br>(vul het antwoord in de adresbalk als waarde van de query parameter answer)"
+      "value": {
+        "order": 1,
+        "reply": "Introductievraag! 🎄 Hoeveel is 1 + 1? <br><br>(vul het antwoord in de adresbalk als waarde van de query parameter answer)"
+      }
     },
     {
       "key": "2",
-      "value": "Wat is de tiende decimaal van pi?"
+      "value": {
+        "order": 2,
+        "reply": "Wat is de tiende decimaal van pi?"
+      }
     },
     {
       "key": "5",
-      "value": "Waar denkt men dat Covid-19 is ontstaan?"
+      "value": {
+        "order": 3,
+        "reply": "Waar denkt men dat Covid-19 is ontstaan?"
+      }
     },
     {
       "key": "wuhan",
-      "value": "Je hebt het einde van de introductie bereikt!"
+      "value": {
+        "order": 4,
+        "reply": "Je hebt het einde van de introductie bereikt!"
+      }
     }
   ]
 }

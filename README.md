@@ -18,6 +18,16 @@ Klik op het pictogram Implementeren in functie-app… (^) in het paneel Azure: F
 
 `mvn package azure-functions:run`
 
+of
+
+`func host start` (in target\azure-functions\cinq-connect directory)
+
 ### Deployen
 
 `mvn azure-functions:deploy`
+
+### Remote debug
+
+1. `npm install -g dbgproxy` (legt een tunnel naar de serverless functie)
+1. installeer az commandline
+1. remote debug naar localhost:8898

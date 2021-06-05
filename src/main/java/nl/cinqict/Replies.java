@@ -7,8 +7,8 @@ public class Replies {
 
     private ArrayList<KeyValue> map = new ArrayList<>();
 
-    public HashMap<String, String> getHashMap() {
-        var result = new HashMap<String, String>();
+    public HashMap<String, ReplyObject> getHashMap() {
+        var result = new HashMap<String, ReplyObject>();
         for (KeyValue t: map) {
             result.put(t.key, t.value);
         }
@@ -17,6 +17,12 @@ public class Replies {
 
     private class KeyValue {
         String key;
-        String value;
+        ReplyObject value;
+    }
+
+    public static class ReplyObject {
+        // TODO: assign order based on the order in the file?
+        int order;
+        String reply;
     }
 }

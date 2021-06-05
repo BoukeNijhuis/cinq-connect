@@ -49,7 +49,7 @@ public class SimpleIntegrationTest {
         doReturn(Logger.getGlobal()).when(context).getLogger();
 
         // Invoke
-        final HttpResponseMessage ret = new Function().run(req, context);
+        final HttpResponseMessage ret = new Question().run(req, context);
 
         return (String) ret.getBody();
     }
