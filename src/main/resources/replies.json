@@ -18,7 +18,7 @@
       "key": "intro",
       "value": {
         "order": 1,
-        "reply": "Introduction question! How much is 1 + 1? <br><br>(enter the answer in the address bar as value of the query parameter answer)"
+        "reply": "Introduction question! How much is 1 + 1? <br><br>(enter the answer in the address bar as the value of the query parameter answer)"
       }
     },
     {
