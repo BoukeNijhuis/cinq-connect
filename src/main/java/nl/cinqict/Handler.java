@@ -11,13 +11,13 @@ import java.util.Map;
 
 public class Handler {
 
-    private static final Object NOT_FOUND = "NOT_FOUND";
+    private static final Object NOT_FOUND = "NOTFOUND";
 
     public ReplyObject handle(String input) {
 
         Map<String, ReplyObject> map;
         try {
-            InputStream inputStream = this.getClass().getResource("/replies.json").openStream();
+            InputStream inputStream = this.getClass().getResource("replies.json").openStream();
             Replies replies = new Gson().fromJson(new InputStreamReader(inputStream, StandardCharsets.UTF_8), Replies.class);
             map = replies.getHashMap();
         } catch (IOException e) {
