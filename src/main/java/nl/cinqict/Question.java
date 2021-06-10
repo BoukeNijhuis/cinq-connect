@@ -1,24 +1,11 @@
 package nl.cinqict;
 
-import com.google.gson.Gson;
-import com.microsoft.azure.functions.ExecutionContext;
-import com.microsoft.azure.functions.HttpMethod;
-import com.microsoft.azure.functions.HttpRequestMessage;
-import com.microsoft.azure.functions.HttpResponseMessage;
-import com.microsoft.azure.functions.HttpStatus;
+import com.microsoft.azure.functions.*;
 import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
-
 import nl.cinqict.Replies.ReplyObject;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpRequest.BodyPublisher;
-import java.net.http.HttpRequest.BodyPublishers;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Optional;
 
 public class Question {
@@ -28,10 +15,10 @@ public class Question {
             HttpMethod.GET }, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
             final ExecutionContext context) {
 
-        return handleAnswer(request);
+        return handleRequest(request);
     }
 
-    private HttpResponseMessage handleAnswer(HttpRequestMessage<Optional<String>> request) {
+    private HttpResponseMessage handleRequest(HttpRequestMessage<Optional<String>> request) {
 
         // load replies
         Handler handler = new Handler();
