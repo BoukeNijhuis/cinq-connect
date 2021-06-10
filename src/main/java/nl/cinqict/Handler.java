@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Handler {
 
-    private static final Object NOT_FOUND = "NOTFOUND";
+    private static final Object NOT_FOUND = "NOT_FOUND";
 
     public ReplyObject handle(String input) {
 
