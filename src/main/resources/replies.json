@@ -39,7 +39,28 @@
       "key": "wuhan",
       "value": {
         "order": 4,
-        "reply": "Je hebt het einde van de introductie bereikt!"
+        "reply": "You've arrived at an unknown island. While looking around you are being greeted by a local. As you went on a surprise trip organized by one of your friends you don't actually know where you ended up, but they said it would be great. After chatting with the local for a while you become rather confused. They said they are 120 years old. They seemed very knowledgeable, but 120 years old?! When you tell them your age they tell you they don´t use a decimal system, but a quinary system. In other words the only numbers they know are 0 1 2 3 and 4. What you consider a 7 is a 12 for them and when their 21 translates to 11 for you. Now how old was this friendly local in the decimal system? "
+      }
+    },
+    {
+      "key": 35,
+      "value": {
+        "order": 5,
+        "reply": "Great you know their age, but they don't know yours yet. What would your age be in the quinary system? (You are 28 year old)."
+      }
+    },
+    {
+      "key": 103,
+      "value": {
+        "order": 6,
+        "reply": "The number 3960091 is the result of two (positive) integers multiplied. Find those two integers and calculate the final answer by adding those two integers together.<br /><br />Example:<br />The number is 15. Multiplying 3 and 5 yields 15, so the final answer is 3 + 5 = 8<br /><br />Possible hints:<br />- The answer only has one valid combination, so the integers you are after are prime numbers -> Maybe use a list of prime numbers?<br />- Both integers are over 500, leaving a range of 500 to about 8000, instead of 3 - 1.300.000<br />- Google is your friend?"
+      }
+    },
+    {
+      "key": 3980,
+      "value": {
+        "order": 7,
+        "reply": "Well done!"
       }
     }
   ]
