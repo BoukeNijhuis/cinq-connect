@@ -21,17 +21,17 @@ public class Handler {
             Replies replies = new Gson().fromJson(new InputStreamReader(inputStream, StandardCharsets.UTF_8), Replies.class);
             map = replies.getHashMap();
         } catch (IOException e) {
-            ReplyObject questionObject = new ReplyObject();
-            questionObject.reply = "could not load the questions: " + e.getMessage();
-            return questionObject;
+            ReplyObject replyObject = new ReplyObject();
+            replyObject.reply = "could not load the questions: " + e.getMessage();
+            return replyObject;
         }
-        ReplyObject questionObject = map.get(input);
+        ReplyObject replyObject = map.get(input);
 
         // no answer found
-        if (questionObject == null) {
-            questionObject = map.get(NOT_FOUND);
+        if (replyObject == null) {
+            replyObject = map.get(NOT_FOUND);
         }
 
-        return questionObject;
+        return replyObject;
     }
 }
