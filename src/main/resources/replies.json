@@ -4,7 +4,7 @@
       "key": "URL",
       "value": {
         "order": -2,
-        "reply": "http://localhost:7071/api/last-question"
+        "reply": "https://known-answers.azurewebsites.net/post"
       }
     },
     {

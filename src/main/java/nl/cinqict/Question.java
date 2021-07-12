@@ -20,7 +20,7 @@ public class Question {
     private static final int FIRST_QUESTION_ORDER = 1;
     private static final String CORRECT_ANSWERS_URL = "URL";
     private static final String QUERY_PARAMETER_ANSWER_KEY = "answer";
-    private static final String KEY_FOR_FIRST_QUESTION = "first_question";
+    private static final String KEY_FOR_FIRST_QUESTION = "FIRST_QUESTION";
 
     String correctAnswersURL;
 
@@ -28,7 +28,6 @@ public class Question {
     public HttpResponseMessage run(@HttpTrigger(name = "req", methods = {
             HttpMethod.GET}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
                                    final ExecutionContext context) {
-
         return handleRequest(request);
     }
 
@@ -66,7 +65,6 @@ public class Question {
     }
 
     private void sendRequest(String answer) {
-        // TODO: create spring boot project that has the correct answers
         BodyPublisher bodyPublisher = BodyPublishers.ofString(answer);
         var request = HttpRequest.newBuilder(URI.create(correctAnswersURL)).POST(bodyPublisher).build();
         try {

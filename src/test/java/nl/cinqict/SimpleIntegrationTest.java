@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
 
 public class SimpleIntegrationTest {
 
-    private static final String URL = "/correct-answer";
+    private static final String URL = "/post";
     private static WireMockServer server;
 
     @BeforeAll
@@ -45,6 +45,12 @@ public class SimpleIntegrationTest {
     @AfterAll
     public static void stopWireMock() {
         server.stop();
+    }
+
+    @Test
+    public void noAnswer() {
+        assertEquals("<pre>Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken.</pre>", callFunction(null));
+        server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
@@ -76,7 +82,9 @@ public class SimpleIntegrationTest {
         final HttpRequestMessage<Optional<String>> req = mock(HttpRequestMessage.class);
 
         final Map<String, String> queryParams = new HashMap<>();
-        queryParams.put("answer", input);
+        if (input != null) {
+            queryParams.put("answer", input);
+        }
         doReturn(queryParams).when(req).getQueryParameters();
 
         final Optional<String> queryBody = Optional.empty();
