@@ -46,7 +46,7 @@
       "key": "wuhan",
       "value": {
         "order": 4,
-        "reply": "You've arrived at an unknown island. While looking around you are being greeted by a local. As you went on a surprise trip organized by one of your friends you don't actually know where you ended up, but they said it would be great. After chatting with the local for a while you become rather confused. They said they are 120 years old. They seemed very knowledgeable, but 120 years old?! When you tell them your age they tell you they don´t use a decimal system, but a quinary system. In other words the only numbers they know are 0 1 2 3 and 4. What you consider a 7 is a 12 for them and when their 21 translates to 11 for you. Now how old was this friendly local in the decimal system? "
+        "reply": "You've arrived at an unknown island. While looking around you are being greeted by a local. As you went on a surprise trip organized by one of your friends you don't actually know where you ended up, but they said it would be great. After chatting with the local for a while you become rather confused. They said they are 120 years old. They seemed very knowledgeable, but 120 years old?! When you tell them your age they tell you they don´t use a decimal system, but a quinary system. In other words the only numbers they know are 0 1 2 3 and 4. What you consider a 7 is a 12 for them and their 21 translates to 11 for you. Now how old was this friendly local in the decimal system? "
       }
     },
     {
@@ -67,7 +67,35 @@
       "key": 3980,
       "value": {
         "order": 7,
-        "reply": "Well done!"
+        "reply": "The local you met earlier has a puzzle for you to solve. You are given a 'hailstone number'. The rules are simple. If the the number is odd you will multiply by 3 and add 1 and when the number is even you will divide by 2. Example: Take number 7. The sequence is as follows: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 Now your number is 27, how many steps do you need to reach 1."
+      }
+    },
+    {
+      "key": 111,
+      "value": {
+        "order": 8,
+        "reply": "How many times can you find the words listed in file A in file B?"
+      }
+    },
+    {
+      "key": 123,
+      "value": {
+        "order": 9,
+        "reply": "During a test Bouke discovers a bug. He knows commit cafebabe was correct, so he applies a binary search to find the commit that caused the bug. In case the middle commit will result in a decimal value, Bouke will always round down. How often will he have to checkout in order to find the offending commit?"
+      }
+    },
+    {
+      "key": "11",
+      "value": {
+        "order": 10,
+        "reply": "The island CINQ is shaped like a Q and they would like to know the length of the leg and the circle. Multiply the length of the leg with the length of the circle. [0,1][1,2][2,3][3,4][4,2]"
+      }
+    },
+    {
+      "key": 6,
+      "value": {
+        "order": 11,
+        "reply": "*\\o/*"
       }
     }
   ]
