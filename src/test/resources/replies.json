@@ -1,0 +1,53 @@
+{
+  "map": [
+    {
+      "key": "URL",
+      "value": {
+        "order": -2,
+        "reply": "http://localhost:9999/post"
+      }
+    },
+    {
+      "key": "NOT_FOUND",
+      "value": {
+        "order": -1,
+        "reply": "Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag."
+      }
+    },
+    {
+      "key": "FIRST_QUESTION",
+      "value": {
+        "order": 0,
+        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+      }
+    },    
+    {
+      "key": "intro",
+      "value": {
+        "order": 1,
+        "reply": "Introductievraag! 🎄 Hoeveel is 1 + 1? <br><br>(vul het antwoord in de adresbalk als waarde van de query parameter answer)"
+      }
+    },
+    {
+      "key": "2",
+      "value": {
+        "order": 2,
+        "reply": "Wat is de tiende decimaal van pi?"
+      }
+    },
+    {
+      "key": "5",
+      "value": {
+        "order": 3,
+        "reply": "Waar denkt men dat Covid-19 is ontstaan?"
+      }
+    },
+    {
+      "key": "wuhan",
+      "value": {
+        "order": 4,
+        "reply": "Je hebt het einde van de introductie bereikt!"
+      }
+    }
+  ]
+}

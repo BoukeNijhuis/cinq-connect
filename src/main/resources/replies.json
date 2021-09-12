@@ -1,12 +1,12 @@
 {
   "map": [
     {
-      "key": "null",
+      "key": "URL",
       "value": {
-        "order": 0,
-        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+        "order": -2,
+        "reply": "https://known-answers.azurewebsites.net/post"
       }
-    },    
+    },
     {
       "key": "NOT_FOUND",
       "value": {
@@ -14,6 +14,13 @@
         "reply": "Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag."
       }
     },
+    {
+      "key": "FIRST_QUESTION",
+      "value": {
+        "order": 0,
+        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+      }
+    },    
     {
       "key": "intro",
       "value": {
