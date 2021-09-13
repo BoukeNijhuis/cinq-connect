@@ -18,7 +18,7 @@
       "key": "FIRST_QUESTION",
       "value": {
         "order": 0,
-        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>."
+        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
       }
     },    
     {
