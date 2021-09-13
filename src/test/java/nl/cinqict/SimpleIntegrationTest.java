@@ -49,31 +49,31 @@ public class SimpleIntegrationTest {
 
     @Test
     public void noAnswer() {
-        assertEquals("<pre>Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken.</pre>", callFunction(null));
+        assertEquals("<pre>Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>.</pre>", callFunction(null));
         server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question1() {
-        assertEquals("<pre>Wat is de tiende decimaal van pi?</pre>", callFunction("2"));
+        assertEquals("<pre>What is the second decimal of pi?</pre>", callFunction("2"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question2() {
-        assertEquals("<pre>Waar denkt men dat Covid-19 is ontstaan?</pre>", callFunction("5"));
+        assertEquals("<pre>In what year became covid-19 a pandemic?</pre>", callFunction("4"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question3() {
-        assertEquals("<pre>Je hebt het einde van de introductie bereikt!</pre>", callFunction("Wuhan"));
+        assertEquals("<pre>This is the end of the introduction!</pre>", callFunction("2019"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void invalidAnswer() {
-        assertEquals("<pre>Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag.</pre>", callFunction("1"));
+        assertEquals("<pre>This answer is incorrect. Use the back button to go back to the question.</pre>", callFunction("1"));
         server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 

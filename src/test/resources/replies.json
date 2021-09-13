@@ -11,42 +11,42 @@
       "key": "NOT_FOUND",
       "value": {
         "order": -1,
-        "reply": "Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag."
+        "reply": "This answer is incorrect. Use the back button to go back to the question."
       }
     },
     {
       "key": "FIRST_QUESTION",
       "value": {
         "order": 0,
-        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>."
       }
-    },    
+    },
     {
       "key": "intro",
       "value": {
         "order": 1,
-        "reply": "Introductievraag! 🎄 Hoeveel is 1 + 1? <br><br>(vul het antwoord in de adresbalk als waarde van de query parameter answer)"
+        "reply": "Introduction question! How much is 1 + 1? <br><br>(enter the answer in the address bar as the value of the query parameter answer)"
       }
     },
     {
-      "key": "2",
+      "key": 2,
       "value": {
         "order": 2,
-        "reply": "Wat is de tiende decimaal van pi?"
+        "reply": "What is the second decimal of pi?"
       }
     },
     {
-      "key": "5",
+      "key": 4,
       "value": {
         "order": 3,
-        "reply": "Waar denkt men dat Covid-19 is ontstaan?"
+        "reply": "In what year became covid-19 a pandemic?"
       }
     },
     {
-      "key": "wuhan",
+      "key": 2019,
       "value": {
         "order": 4,
-        "reply": "Je hebt het einde van de introductie bereikt!"
+        "reply": "This is the end of the introduction!"
       }
     }
   ]
