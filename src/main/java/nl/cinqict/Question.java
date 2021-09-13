@@ -53,15 +53,12 @@ public class Question {
         // lookup the reply
         ReplyObject replyObject = handler.handle(answer);
 
-        // format the reply
-        String body = Util.format(replyObject.reply);
-
         // only send correct answers
         if (replyObject.order > FIRST_QUESTION_ORDER) {
             sendRequest(answer);
         }
 
-        return request.createResponseBuilder(HttpStatus.OK).body(body).header("Content-Type", "text/html").build();
+        return request.createResponseBuilder(HttpStatus.OK).body(replyObject.reply).header("Content-Type", "text/html").build();
     }
 
     private void sendRequest(String answer) {

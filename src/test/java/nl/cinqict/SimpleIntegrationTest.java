@@ -49,31 +49,31 @@ public class SimpleIntegrationTest {
 
     @Test
     public void noAnswer() {
-        assertEquals("<pre>Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>.</pre>", callFunction(null));
+        assertEquals("Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>.", callFunction(null));
         server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question1() {
-        assertEquals("<pre>What is the second decimal of pi?</pre>", callFunction("2"));
+        assertEquals("What is the second decimal of pi?", callFunction("2"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question2() {
-        assertEquals("<pre>In what year became covid-19 a pandemic?</pre>", callFunction("4"));
+        assertEquals("In what year became covid-19 a pandemic?", callFunction("4"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question3() {
-        assertEquals("<pre>This is the end of the introduction!</pre>", callFunction("2019"));
+        assertEquals("This is the end of the introduction!", callFunction("2019"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void invalidAnswer() {
-        assertEquals("<pre>This answer is incorrect. Use the back button to go back to the question.</pre>", callFunction("1"));
+        assertEquals("This answer is incorrect. Use the back button to go back to the question.", callFunction("1"));
         server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
