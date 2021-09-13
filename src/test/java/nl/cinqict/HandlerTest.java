@@ -17,12 +17,12 @@ public class HandlerTest {
     @Test
     public void happyFlow() throws Exception {
         String output = handler.handle("2").reply;
-        assertEquals("Wat is de tiende decimaal van pi?", output);
+        assertEquals("What is the second decimal of pi?", output);
     }
 
     @Test
     public void unhappyFlow() throws Exception {
         String output = handler.handle("-1").reply;
-        assertEquals("Dit antwoord is incorrect. Gebruik de Terug knop om terug te gaan naar de vraag.", output);
+        assertEquals("This answer is incorrect. Use the back button to go back to the question.", output);
     }
 }
