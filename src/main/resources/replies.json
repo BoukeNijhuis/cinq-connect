@@ -95,6 +95,13 @@
       "key": 6,
       "value": {
         "order": 11,
+        "reply": "What is the extenstion of files that start with the magic number 'CAFEBABE'?"
+      }
+    },
+    {
+      "key": "class",
+      "value": {
+        "order": 12,
         "reply": "*\\o/*"
       }
     }
