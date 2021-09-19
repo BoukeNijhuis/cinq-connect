@@ -95,6 +95,21 @@
       "key": 3980,
       "value": {
         "order": 11,
+        "reply": "You are given a grid of dots. Find as many squares inside this grid as possible. Squares may be placed diagonally, so they don't necessarily have to follow the grid.
+        For example, in a grid that is 4x3 dots you can find 10 squares. How many squares can you find if we add another line of dots, so the grid becomes 4x4? See grid below: <br>
+        <pre>
+        .  .  .  .
+        .  .  .  .
+        .  .  .  .
+        .  .  .  .
+        </pre>
+        "
+      }
+    }
+    {
+      "key": 20,
+      "value": {
+        "order": 12,
         "reply": "This is the end!"
       }
     }
