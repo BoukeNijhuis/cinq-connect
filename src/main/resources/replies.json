@@ -18,9 +18,9 @@
       "key": "FIRST_QUESTION",
       "value": {
         "order": 0,
-        "reply": "Begin de introductie door <a href=\"/api/question?answer=intro\">hier</a> te klikken."
+        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>."
       }
-    },    
+    },
     {
       "key": "intro",
       "value": {
@@ -88,26 +88,18 @@
       "key": 111,
       "value": {
         "order": 10,
+        "reply": "You are given a grid of dots. Find as many squares inside this grid as possible. Squares may be placed diagonally, so they don't necessarily have to follow the grid. For example, in a grid that is 4x3 dots you can find 10 squares. How many squares can you find if we add another line of dots, so the grid becomes 4x4?<br><br> See grid below: <br> <pre> .  .  .  .<br> .  .  .  .<br> .  .  .  .<br> .  .  .  .</pre>"
+      }
+    },
+    {
+      "key": 20,
+      "value": {
+        "order": 11,
         "reply": "The number 3960091 is the result of two (positive) integers multiplied. Find those two integers and calculate the final answer by adding those two integers together.<br /><br />Example:<br />The number is 15. Multiplying 3 and 5 yields 15, so the final answer is 3 + 5 = 8<br /><br />Possible hints:<br />- The answer only has one valid combination, so the integers you are after are prime numbers -> Maybe use a list of prime numbers?<br />- Both integers are over 500, leaving a range of 500 to about 8000, instead of 3 - 1.300.000<br />"
       }
     },
     {
       "key": 3980,
-      "value": {
-        "order": 11,
-        "reply": "You are given a grid of dots. Find as many squares inside this grid as possible. Squares may be placed diagonally, so they don't necessarily have to follow the grid.
-        For example, in a grid that is 4x3 dots you can find 10 squares. How many squares can you find if we add another line of dots, so the grid becomes 4x4? See grid below: <br>
-        <pre>
-        .  .  .  .
-        .  .  .  .
-        .  .  .  .
-        .  .  .  .
-        </pre>
-        "
-      }
-    }
-    {
-      "key": 20,
       "value": {
         "order": 12,
         "reply": "This is the end!"

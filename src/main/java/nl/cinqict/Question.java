@@ -17,7 +17,7 @@ import java.util.Optional;
 
 public class Question {
 
-    private static final int FIRST_QUESTION_ORDER = 1;
+    private static final int FIRST_QUESTION_ORDER = 5;
     private static final String CORRECT_ANSWERS_URL = "URL";
     private static final String QUERY_PARAMETER_ANSWER_KEY = "answer";
     private static final String KEY_FOR_FIRST_QUESTION = "FIRST_QUESTION";

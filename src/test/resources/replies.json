@@ -48,6 +48,20 @@
         "order": 4,
         "reply": "This is the end of the introduction!"
       }
+    },
+    {
+      "key": "start",
+      "value": {
+        "order": 5,
+        "reply": "During a test Bouke discovers a bug. He knows commit cafebabe was correct, so he applies a binary search to find the commit that caused the bug. In case the middle commit will result in a decimal value, Bouke will always round down. How often will he have to checkout in order to find the offending commit?"
+      }
+    },
+    {
+      "key": 11,
+      "value": {
+        "order": 6,
+        "reply": "How many times can you find the words listed in file A in file B?"
+      }
     }
   ]
 }

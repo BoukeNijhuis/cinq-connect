@@ -56,18 +56,30 @@ public class SimpleIntegrationTest {
     @Test
     public void question1() {
         assertEquals("What is the second decimal of pi?", callFunction("2"));
-        server.verify(1, postRequestedFor(urlEqualTo(URL)));
+        server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question2() {
         assertEquals("In what year became covid-19 a pandemic?", callFunction("4"));
-        server.verify(1, postRequestedFor(urlEqualTo(URL)));
+        server.verify(0, postRequestedFor(urlEqualTo(URL)));
     }
 
     @Test
     public void question3() {
         assertEquals("This is the end of the introduction!", callFunction("2019"));
+        server.verify(0, postRequestedFor(urlEqualTo(URL)));
+    }
+
+    @Test
+    public void question4() {
+        assertEquals("During a test Bouke discovers a bug. He knows commit cafebabe was correct, so he applies a binary search to find the commit that caused the bug. In case the middle commit will result in a decimal value, Bouke will always round down. How often will he have to checkout in order to find the offending commit?", callFunction("start"));
+        server.verify(0, postRequestedFor(urlEqualTo(URL)));
+    }
+
+    @Test
+    public void question5() {
+        assertEquals("How many times can you find the words listed in file A in file B?", callFunction("11"));
         server.verify(1, postRequestedFor(urlEqualTo(URL)));
     }
 
