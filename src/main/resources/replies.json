@@ -39,11 +39,11 @@
       "key": 4,
       "value": {
         "order": 3,
-        "reply": "The 19 in covid-19 is an abbreviation for which number?"
+        "reply": "What is the fourth prime number?"
       }
     },
     {
-      "key": 2019,
+      "key": 7,
       "value": {
         "order": 4,
         "reply": "This is the end of the introduction!"
@@ -81,7 +81,7 @@
       "key": 103,
       "value": {
         "order": 9,
-        "reply": "The local you met earlier has a puzzle for you to solve. The rules are simple. If the the number is odd you will multiply by 3 and add 1 and when the number is even you will divide by 2. Example: Take number 7. The sequence is as follows: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 Now your number is 27, how many steps do you need to reach 1."
+        "reply": "The local you met earlier has a puzzle for you to solve. The rules are simple. If the the number is odd you will multiply by 3 and add 1 and when the number is even you will divide by 2. Example: Take number 7. The sequence is as follows: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1. So the correct answer for 7 is 16. Now your number is 27, how many steps do you need to reach 1."
       }
     },
     {
