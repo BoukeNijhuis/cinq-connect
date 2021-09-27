@@ -60,7 +60,7 @@
       "key": 11,
       "value": {
         "order": 6,
-        "reply": "How many times can you find the words listed in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Needles.txt' target='_blank'>needles</a> in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Haystack.txt' target='_blank'>haystack</a>? Please not that words can be part of longer words like 'no' is part of 'mono'. If this happens you count them both."
+        "reply": "How many times can you find the words listed in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Needles.txt' target='_blank'>needles</a> in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Haystack.txt' target='_blank'>haystack</a>? Please note that words can be part of longer words like 'no' is part of 'mono'. If this happens you count them both."
       }
     },
     {
