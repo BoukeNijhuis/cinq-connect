@@ -18,7 +18,7 @@
       "key": "FIRST_QUESTION",
       "value": {
         "order": 0,
-        "reply": "Start the introduction by clicking <a href=\"/api/question?answer=intro\">here</a>."
+        "reply": "Start the introduction by clicking <a href='/api/question?answer=intro'>here</a>."
       }
     },
     {
@@ -39,7 +39,7 @@
       "key": 4,
       "value": {
         "order": 3,
-        "reply": "In what year became covid-19 a pandemic?"
+        "reply": "The 19 in covid-19 is an abbreviation for which number?"
       }
     },
     {
@@ -53,14 +53,14 @@
       "key": "start",
       "value": {
         "order": 5,
-        "reply": "During a test Bouke discovers a bug. He knows commit cafebabe was correct, so he applies a binary search to find the commit that caused the bug. In case the middle commit will result in a decimal value, Bouke will always round down. How often will he have to checkout in order to find the offending commit?"
+        "reply": "During a test Bouke discovers a bug. He knows the bug is introduced in the last 2000 commits, so he applies a binary search to find the commit that caused the bug. In case the middle commit will result in a decimal value, Bouke will always round up. How often will he have to checkout in order to find the offending commit?"
       }
     },
     {
       "key": 11,
       "value": {
         "order": 6,
-        "reply": "How many times can you find the words listed in file A in file B?"
+        "reply": "How many times can you find the words listed in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Needles.txt' target='_blank'>needles</a> in file <a href='https://raw.githubusercontent.com/BoukeNijhuis/haystack-needle/master/Haystack.txt' target='_blank'>haystack</a>? Please not that words can be part of longer words like 'no' is part of 'mono'. If this happens you count them both."
       }
     },
     {
