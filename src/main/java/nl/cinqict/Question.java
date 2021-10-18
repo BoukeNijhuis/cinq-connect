@@ -10,10 +10,13 @@ import java.util.Optional;
 
 public class Question {
 
+    public static final String QUERY_PARAM_ANSWER = "answer";
+    public static final String NO_ANSWER_FOUND = "null";
+
     @FunctionName("question")
     public HttpResponseMessage run(@HttpTrigger(name = "req", methods = {
-            HttpMethod.GET }, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
-            final ExecutionContext context) {
+            HttpMethod.GET}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>> request,
+                                   final ExecutionContext context) {
 
         return handleRequest(request);
     }
@@ -24,11 +27,11 @@ public class Question {
         Handler handler = new Handler();
 
         // parse query parameter
-        String answer = request.getQueryParameters().get("answer");
+        String answer = request.getQueryParameters().get(QUERY_PARAM_ANSWER);
 
         // no or empty query parameter
         if (answer == null) {
-            answer = "null";
+            answer = NO_ANSWER_FOUND;
         } else {
             // normalize the input
             answer = answer.toLowerCase();
@@ -37,9 +40,9 @@ public class Question {
         // lookup the reply
         ReplyObject replyObject = handler.handle(answer);
 
-        // format the reply
-        String body = Util.format(replyObject.reply);
-
-        return request.createResponseBuilder(HttpStatus.OK).body(body).header("Content-Type", "text/html").build();
+        return request.createResponseBuilder(HttpStatus.OK)
+                .body(replyObject.reply)
+                .header("Content-Type", "text/html")
+                .build();
     }
 }
