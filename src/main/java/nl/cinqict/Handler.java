@@ -16,9 +16,8 @@ public class Handler {
     public ReplyObject handle(String input) {
 
         Map<String, ReplyObject> map;
-        try {
-            InputStream inputStream = this.getClass().getResource("replies.json").openStream();
-            Replies replies = new Gson().fromJson(new InputStreamReader(inputStream, StandardCharsets.UTF_8), Replies.class);
+        try (InputStream inputStream = getInputStream()) {
+            Replies replies = getReplies(inputStream);
             map = replies.getHashMap();
         } catch (IOException e) {
             ReplyObject questionObject = new ReplyObject();
@@ -33,5 +32,13 @@ public class Handler {
         }
 
         return questionObject;
+    }
+
+    private Replies getReplies(InputStream inputStream) {
+        return new Gson().fromJson(new InputStreamReader(inputStream, StandardCharsets.UTF_8), Replies.class);
+    }
+
+    private InputStream getInputStream() throws IOException {
+        return this.getClass().getResource("/replies.json").openStream();
     }
 }

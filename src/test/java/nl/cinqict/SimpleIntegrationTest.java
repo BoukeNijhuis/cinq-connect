@@ -22,8 +22,8 @@ public class SimpleIntegrationTest {
     @Test
     public void solutionTest() {
         assertEquals("<pre>What is the second decimal of pi?</pre>", callFunction("2"));
-        assertEquals("<pre>What is the best conference of Portugal?</pre>", callFunction("4"));
-        assertEquals("<pre>This is the end of the introduction!</pre>", callFunction("jnation"));
+        assertEquals("<pre>What is the best conference of the Netherlands?</pre>", callFunction("4"));
+        assertEquals("<pre>This is the end of the introduction!</pre>", callFunction("jfall"));
     }
 
     private String callFunction(String input) {
