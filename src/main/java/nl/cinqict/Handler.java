@@ -39,6 +39,6 @@ public class Handler {
     }
 
     private InputStream getInputStream() throws IOException {
-        return this.getClass().getResource("/replies.json").openStream();
+        return this.getClass().getResource("replies.json").openStream();
     }
 }
